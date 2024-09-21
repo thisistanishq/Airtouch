@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airtouch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="preloader" class="preloader">
+        <p id="preloader-text"></p>
+    </div>
+
+    <div id="homePage" class="container" style="display: none;">
+        <h1>AiRToucH</h1>
+        <p>Ready to make some noise?</p>
+        <button class="btn" onclick="showInstructions()">START</button>
+    </div>
+
+    <div id="instructionsPage" class="container" style="display: none;">
+        <h2>Instructions:</h2>
+        <div class="instructions">
+            <ul>
+                <li>Click: Tap Middle Finger Down</li>
+                <li>Double Click: Quick Double Tap</li>
+                <li>Move: Move Index Finger</li>
+                <li>Scroll: Swipe Up/Down</li>
+                <li>Drag: Hold Index Finger</li>
+            </ul>
+        </div>
+        <button class="btn" onclick="showProject()">NEXT</button>
+    </div>
+
+    <div id="projectPage" class="container" style="display: none;">
+        <h2>FLYOFF!!</h2>
+        <div id="videoFeed">
+            <img src="{{ url_for('video_feed') }}" alt="Video feed">
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
