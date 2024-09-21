@@ -1,5 +1,0 @@
-Flask
-opencv-python-headless
-mediapipe
-PyAutoGUI
-gunicorn
